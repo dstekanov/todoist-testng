@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Main test suite"
+       verbose="2"
+       configfailurepolicy="continue"
+       parallel="classes"
+       thread-count="3"
+       data-provider-thread-count="2">
+
+    <test name="Main">
+        <packages>
+            <package name="com.todoist.*"/>
+        </packages>
+    </test>
+
+</suite>

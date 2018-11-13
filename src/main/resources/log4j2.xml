@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <Properties>
+        <Property name="filename">log/all_logs.log</Property>
+        <Property name="filepattern">log/all_logs-%d{MM-dd-yyyy}-%i.log</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console"
+                 target="SYSTEM_OUT">
+            <PatternLayout pattern="%-5p [%t] [%d{ABSOLUTE}] %m %n"/>
+        </Console>
+
+        <RollingFile name="RollingFile"
+                     fileName="${filename}"
+                     filePattern="${filepattern}"
+                     immediateFlush="false">
+            <PatternLayout pattern="%-5p [%t] [%d{ABSOLUTE}] %m %n"/>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <!--<SizeBasedTriggeringPolicy size="100 KB"/>-->
+            </Policies>
+            <DefaultRolloverStrategy max="100"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="com.sd.petproject" level="trace">
+            <AppenderRef ref="RollingFile"/>
+        </Logger>
+        <Logger name="org.openqa.selenium.remote" level="OFF"/>
+
+    </Loggers>
+</Configuration>

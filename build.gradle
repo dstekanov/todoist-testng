@@ -1,0 +1,90 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'io.qameta.allure'
+
+defaultTasks 'clean', 'test'
+
+group = 'com.todoist.testng'
+version = '1'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+ext {
+    seleniumVersion = '3.14.0'
+    selenideVersion = '5.+'
+    testngVersion = '6.+'
+    guiceVersion = '4.+'
+    allureVersion = '2.8.0'
+    mainTestNGsuite = 'testng-suites\\testng.xml'
+}
+
+test {
+    useTestNG() {
+        // TestNGOptions https://docs.gradle.org/current/javadoc/org/gradle/api/tasks/testing/testng/TestNGOptions.html
+        suites(mainTestNGsuite)
+
+        setParallel('classes')
+        setThreadCount(1)
+    }
+    ignoreFailures = true
+
+//    - Parameters below typically must be defined in jenkins.
+//    - {default} means that value from 'config.properties' will be used
+    systemProperty 'browser', System.getProperty('browser', '{default}')
+}
+
+allure {
+    version = allureVersion
+    autoconfigure = true
+    aspectjweaver = true
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.5"
+    }
+}
+
+/////////////////////////////////////////////////// DEPENDENCIES
+
+dependencies {
+    compile 'com.codeborne:selenide:' + selenideVersion
+
+    compile 'org.testng:testng:' + testngVersion
+    compile 'org.seleniumhq.selenium:selenium-java:' + seleniumVersion
+    compile 'org.seleniumhq.selenium:selenium-api:' + seleniumVersion
+
+    compile 'com.google.inject:guice:' + guiceVersion
+
+    compile 'io.qameta.allure:allure-testng:' + allureVersion
+    compile 'io.qameta.allure:allure-assertj:' + allureVersion
+    compile 'io.qameta.allure:allure-rest-assured:' + allureVersion
+    compile 'io.qameta.allure:allure-selenide:' + allureVersion
+    compile 'io.qameta.allure:allure-java-commons:'+ allureVersion
+
+    testRuntime group: 'org.assertj', name: 'assertj-core', version: '3.9.0'
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    compile group: 'com.google.guava', name: 'guava', version: '27.0-jre'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-1.2-api', version: '2.10.0'
+
+    compile group: 'org.awaitility', name: 'awaitility', version: '3.0.0'
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'
+    compile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.7'
+    compile group: 'javax.mail', name: 'mail', version: '1.5.0-b01'
+}
