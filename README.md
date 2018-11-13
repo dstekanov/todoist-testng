@@ -1,22 +1,4 @@
-POC for MYADT (https://www.myadt.com/)
-
-###Lombok:
-
-This project uses Lombok library. Add the **Lombok IntelliJ plugin** to support it in IntelliJ IDEA:
-
-- Go to "File > Settings > Plugins"
-- Click on "Browse repositories..."
-- Search for "Lombok Plugin"
-- Click on "Install plugin"
-- Restart IntelliJ IDEA
-
-And enable the following:
-
-- Preferences (Ctrl + Alt + S)
-- Build, Execution, Deployment
-- Compiler
-- Annotation Processors
-- Enable annotation processing
+POC for TestNG & Todoist (https://www.todoist.com/)
 
 ###Git workflow:
 
