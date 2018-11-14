@@ -1,4 +1,4 @@
-package com.todoist.guice.provider;
+package com.todoist.guice.module;
 
 import com.fasterxml.jackson.databind.AnnotationIntrospector;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
-import com.todoist.guice.module.TodoistRequestSpecificationProvider;
+import com.todoist.guice.provider.TodoistRequestSpecificationProvider;
 import io.restassured.specification.RequestSpecification;
 
 public class TodoistRestModule extends AbstractModule {

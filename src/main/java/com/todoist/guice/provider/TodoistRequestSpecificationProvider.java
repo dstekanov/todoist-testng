@@ -1,4 +1,4 @@
-package com.todoist.guice.module;
+package com.todoist.guice.provider;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Inject;

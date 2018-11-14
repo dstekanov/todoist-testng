@@ -13,9 +13,10 @@ import com.todoist.guice.converter.ListMatcher;
 import com.todoist.guice.converter.ListTypeConverter;
 import com.todoist.guice.module.JsonDataModule;
 import com.todoist.guice.module.PropertiesModule;
+import com.todoist.guice.module.TodoistRestModule;
+import com.todoist.guice.module.WebDriverModule;
 import com.todoist.guice.provider.EmailProvider;
 import com.todoist.guice.provider.PasswordProvider;
-import com.todoist.guice.provider.TodoistRestModule;
 import com.todoist.utils.Config;
 
 public class MainModule extends AbstractModule {
@@ -33,11 +34,13 @@ public class MainModule extends AbstractModule {
 
     @Override
     protected void configure() {
+
         bind(ObjectMapper.class).toInstance(objectMapper);
 
         bind(String.class).annotatedWith(Names.named("random_email")).toProvider(EmailProvider.class);
         bind(String.class).annotatedWith(Names.named("random_password")).toProvider(PasswordProvider.class);
 
+        install(new WebDriverModule());
         install(new TodoistRestModule());
         install(new PropertiesModule(Config.getProperties()));
 

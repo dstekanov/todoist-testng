@@ -24,7 +24,7 @@ ext {
     selenideVersion = '5.+'
     testngVersion = '6.+'
     guiceVersion = '4.+'
-    allureVersion = '2.8.0'
+    allureVersion = '2.7.0'
     mainTestNGsuite = 'testng-suites\\testng.xml'
 }
 
@@ -68,6 +68,8 @@ dependencies {
     compile 'org.seleniumhq.selenium:selenium-api:' + seleniumVersion
 
     compile 'com.google.inject:guice:' + guiceVersion
+
+    compile group: 'org.testcontainers', name: 'selenium', version: '1.10.1'
 
     compile 'io.qameta.allure:allure-testng:' + allureVersion
     compile 'io.qameta.allure:allure-assertj:' + allureVersion
