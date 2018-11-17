@@ -13,6 +13,18 @@ public enum Browser {
         this.driverType = driverType;
     }
 
+    /**
+     * Get enum from string. Default value CHROME if browser name is not matched.
+     */
+    public static Browser fromString(String browser) {
+        for (Browser b : values()) {
+            if (b.driverType.equalsIgnoreCase(browser)) {
+                return b;
+            }
+        }
+        return CHROME;
+    }
+
     public String getName() {
         return driverType;
     }

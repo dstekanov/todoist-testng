@@ -13,8 +13,6 @@ public class Chrome implements DriverCapabilities {
 
     @Override
     public Capabilities get() {
-        System.setProperty("webdriver.chrome.logfile", "log\\browsers\\chromedriver.log");
-
         ChromeOptions chromeOptions = new ChromeOptions();
 
         HashMap<String, Object> chromePrefs = new HashMap<>();

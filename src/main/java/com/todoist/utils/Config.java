@@ -29,9 +29,12 @@ public class Config {
     }
 
 
+    /**
+     * Chrome is default if browser property was not specified or did not match available browser.
+     */
     public static Browser getBrowser() {
-        String browser = PROPERTIES.getProperty("browser").toUpperCase();
-        return Browser.valueOf(browser);
+        String browser = PROPERTIES.getProperty("browser");
+        return Browser.fromString(browser);
     }
 
     public static boolean isGridUse() {
@@ -40,10 +43,6 @@ public class Config {
 
     public static String getGridHost() {
         return PROPERTIES.getProperty("grid_host");
-    }
-
-    public static Integer getGridPort() {
-        return Integer.valueOf(PROPERTIES.getProperty("grid_port"));
     }
 
     public static String getSiteUrl() {

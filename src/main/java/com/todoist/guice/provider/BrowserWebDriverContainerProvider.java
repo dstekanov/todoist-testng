@@ -20,7 +20,6 @@ public class BrowserWebDriverContainerProvider implements Provider<BrowserWebDri
         return container;
     }
 
-
     private DesiredCapabilities chooseBrowser() {
         switch (Config.getBrowser()) {
             case FIREFOX:

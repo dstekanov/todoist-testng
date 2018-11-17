@@ -12,8 +12,6 @@ public class FireFox implements DriverCapabilities {
 
     @Override
     public Capabilities get() {
-        System.setProperty("webdriver.firefox.logfile", "log\\browsers\\firefox.log");
-
         FirefoxProfile profile = new FirefoxProfile();
 
 //                profile.setPreference("security.mixed_content.block_active_content", false); // disable mixed content warn

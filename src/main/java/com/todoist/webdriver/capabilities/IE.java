@@ -10,8 +10,6 @@ public class IE implements DriverCapabilities {
 
     @Override
     public Capabilities get() {
-        System.setProperty("webdriver.ie.driver.logfile", "log\\browsers\\ie.log");
-
         InternetExplorerOptions ieOptions = new InternetExplorerOptions();
         ieOptions.merge(getCommonCapabilities());
         // solution for problem with cookies (and another session items) shared between multiple instances of InternetExplorer.

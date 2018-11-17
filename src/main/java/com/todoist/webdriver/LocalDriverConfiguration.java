@@ -1,21 +1,19 @@
 package com.todoist.webdriver;
 
 
+import com.codeborne.selenide.Configuration;
 import com.todoist.utils.Config;
-import com.todoist.webdriver.local.LocalBrowser;
+import com.todoist.webdriver.capabilities.DriverCapabilities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.Augmenter;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class LocalDriverLauncher implements WebDriverLauncher {
+public class LocalDriverConfiguration implements WebDriverConfiguration {
 
     private final Logger logger = LogManager.getLogger(getClass());
 
     @Override
-    public WebDriver start() {
+    public void configure() {
         final Browser browser = Config.getBrowser();
         logger.info(String.format("Starting Local WebDriver. Browser==[%s]...", browser.getName()));
 
@@ -40,19 +38,8 @@ public class LocalDriverLauncher implements WebDriverLauncher {
 //        if (proxy != null) driver.setCapability(CapabilityType.PROXY, proxy);
         // endregion =========== BrowserMob proxy ================================
 
-        RemoteWebDriver driver = LocalBrowser.driverFor(browser);
+        Configuration.browser = browser.getName();
 
-        // HOW IT WORKS ??
-        driver.manage().window().maximize();
-
-        // Augmented driver adds support for extension with interfaces (like mixins) based on driver
-        // For example: ??? ~ Web Storage
-        Augmenter augmenter = new Augmenter();
-        WebDriver augmentedDriver = augmenter.augment(driver);
-
-        // Create EventFiringWebDriver to support logging purposes throw wd.register(WebDriverEventListener)
-        EventFiringWebDriver eventFiringWD = new EventFiringWebDriver(augmentedDriver);
-
-        return eventFiringWD;
+        Configuration.browserCapabilities = new DesiredCapabilities(DriverCapabilities.capabilitiesFor(browser).get());
     }
 }

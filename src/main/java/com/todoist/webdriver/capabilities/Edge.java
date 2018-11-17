@@ -12,8 +12,6 @@ public class Edge implements DriverCapabilities {
 
     @Override
     public Capabilities get() {
-        System.setProperty("webdriver.edge.logfile", "log\\browsers\\edge.log");
-
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.merge(getCommonCapabilities());
         return edgeOptions;
