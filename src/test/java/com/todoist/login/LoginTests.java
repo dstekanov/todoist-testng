@@ -1,9 +1,9 @@
-package com.todoist.landingpage;
+package com.todoist.login;
 
 import com.todoist.BaseTest;
 import com.todoist.dto.data.UserDTO;
 import com.todoist.steps.NavigationSteps;
-import com.todoist.ui.page.homepage.LoginPage;
+import com.todoist.ui.page.loginpage.LoginPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;

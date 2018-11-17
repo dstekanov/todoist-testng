@@ -1,4 +1,4 @@
-package com.todoist.ui.page.homepage;
+package com.todoist.ui.page.loginpage;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;

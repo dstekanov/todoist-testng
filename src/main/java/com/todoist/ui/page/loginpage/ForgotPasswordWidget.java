@@ -1,4 +1,4 @@
-package com.todoist.ui.page.homepage;
+package com.todoist.ui.page.loginpage;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
