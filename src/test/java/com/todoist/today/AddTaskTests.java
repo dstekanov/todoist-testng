@@ -35,8 +35,9 @@ public class AddTaskTests extends BaseTest {
                 .setPassword(user.getPassword())
                 .clickLoginButton();
 
-        todayPage.addTask("new task");
-        todayPage.verifyTaskPresent("new task");
+        String taskName = "new task";
+        todayPage.addTask(taskName);
+        todayPage.verifyTaskPresent(taskName);
     }
 
 }

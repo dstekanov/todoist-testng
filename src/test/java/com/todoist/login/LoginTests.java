@@ -4,6 +4,7 @@ import com.todoist.BaseTest;
 import com.todoist.dto.data.UserDTO;
 import com.todoist.steps.NavigationSteps;
 import com.todoist.ui.page.loginpage.LoginPage;
+import com.todoist.ui.page.main.TodayPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
@@ -19,6 +20,8 @@ public class LoginTests extends BaseTest {
     @Inject
     private LoginPage loginPage;
     @Inject
+    private TodayPage todayPage;
+    @Inject
     @Named("user_regular")
     private UserDTO user;
 
@@ -31,7 +34,7 @@ public class LoginTests extends BaseTest {
                 .setEmail(user.getEmail())
                 .setPassword(user.getPassword())
                 .clickLoginButton();
-
+        todayPage.verifyOpened();
     }
 
 }

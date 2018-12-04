@@ -23,4 +23,10 @@ public class TodayPage {
 
         Assertions.assertThat(taskNames).containsAnyOf(taskName);
     }
+
+    @Step
+    public void verifyOpened() {
+        String header = $("#agenda_view h2.view_header").text();
+        Assertions.assertThat(header).isEqualToIgnoringWhitespace("Today");
+    }
 }
