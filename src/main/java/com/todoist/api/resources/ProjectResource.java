@@ -31,7 +31,7 @@ public class ProjectResource extends BaseResource {
     /**
      * GET /API/v8/projects
      */
-    public Response getResponse() {
+    public Response getFullProjectsResponse() {
         return newRequest()
                 .get("projects");
     }

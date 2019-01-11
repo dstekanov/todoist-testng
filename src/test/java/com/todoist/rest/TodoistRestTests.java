@@ -3,8 +3,6 @@ package com.todoist.rest;
 import com.todoist.dto.rest.Project;
 import io.qameta.allure.Description;
 import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -36,12 +34,4 @@ public class TodoistRestTests extends BaseRestTest {
     }
 
 
-    @Test
-    @Description("Validate response")
-    public void validateResponse() {
-        Response response = todoistRestSteps.getProjectsResponse();
-
-        response
-                .then().assertThat().content("id", Matchers.hasItem(121929647));
-    }
 }

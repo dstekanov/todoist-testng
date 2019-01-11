@@ -21,6 +21,6 @@ public class TodoistRestSteps {
     @Step
     public Response getProjectsResponse() {
 
-        return restApi.project().getResponse();
+        return restApi.project().getFullProjectsResponse();
     }
 }
