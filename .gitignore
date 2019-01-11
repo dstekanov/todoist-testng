@@ -11,10 +11,8 @@ log/
 **/.idea/tasks.xml
 **/.idea/misc.xml
 **/.idea/libraries/
-
 **/.idea/workspace.xml
 
-**/.gradle/
 build/
 
 # Ignore Gradle GUI config
@@ -22,6 +20,8 @@ gradle-app.setting
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradle/
 
 # Cache of project
 .gradletasknamecache
