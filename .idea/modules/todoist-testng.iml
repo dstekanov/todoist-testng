@@ -15,19 +15,19 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: io.qameta.allure:allure-selenide:2.7.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.codeborne:selenide:5.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.codeborne:selenide:5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: io.qameta.allure:allure-testng:2.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.testng:testng:6.14.3" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.141.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.141.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-edge-driver:3.141.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-firefox-driver:3.141.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-ie-driver:3.141.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-opera-driver:3.141.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-safari-driver:3.141.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-support:3.141.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-remote-driver:3.141.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-api:3.141.5" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.141.59" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.141.59" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-edge-driver:3.141.59" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-firefox-driver:3.141.59" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-ie-driver:3.141.59" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-opera-driver:3.141.59" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-safari-driver:3.141.59" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-support:3.141.59" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-remote-driver:3.141.59" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-api:3.141.59" level="project" />
     <orderEntry type="library" name="Gradle: com.google.inject:guice:4.2.2" level="project" />
     <orderEntry type="library" name="Gradle: org.testcontainers:selenium:1.10.1" level="project" />
     <orderEntry type="library" name="Gradle: io.qameta.allure:allure-assertj:2.7.0" level="project" />
@@ -35,7 +35,7 @@
     <orderEntry type="library" name="Gradle: io.qameta.allure:allure-descriptions-javadoc:2.7.0" level="project" />
     <orderEntry type="library" name="Gradle: io.qameta.allure:allure-attachments:2.7.0" level="project" />
     <orderEntry type="library" name="Gradle: io.qameta.allure:allure-java-commons:2.7.0" level="project" />
-    <orderEntry type="library" name="Gradle: io.github.bonigarcia:webdrivermanager:3.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.github.bonigarcia:webdrivermanager:3.1.1" level="project" />
     <orderEntry type="library" name="Gradle: net.lightbody.bmp:browsermob-core:2.1.5" level="project" />
     <orderEntry type="library" name="Gradle: net.lightbody.bmp:littleproxy:1.1.0-beta-bmp-17" level="project" />
     <orderEntry type="library" name="Gradle: io.rest-assured:rest-assured:3.1.0" level="project" />
