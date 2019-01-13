@@ -7,5 +7,18 @@ pipeline {
                 sh './gradlew clean build'
             }
         }
+        stage('reports') {
+            steps {
+            script {
+                    allure([
+                            includeProperties: false,
+                            jdk: '',
+                            properties: [],
+                            reportBuildPolicy: 'ALWAYS',
+                            results: [[path: 'build/allure-results']]
+                    ])
+            }
+            }
+        }
     }
 }
