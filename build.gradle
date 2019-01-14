@@ -24,7 +24,7 @@ ext {
     selenideVersion = '5.+'
     testngVersion = '6.+'
     guiceVersion = '4.+'
-    allureVersion = '2.7.0'
+    allureVersion = '2.9.0'
     mainTestNGsuite = 'testng-suites\\testng.xml'
 }
 
@@ -44,7 +44,7 @@ test {
 }
 
 allure {
-    version = allureVersion
+    version = '2.5'
     autoconfigure = true
     aspectjweaver = true
 }
