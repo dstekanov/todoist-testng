@@ -16,7 +16,7 @@ pipeline {
                             jdk: '',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
-                            results: [[path: '/var/jenkins_home/workspace/todoist-testng/build/allure-results']]
+                            results: [[path: './build/allure-results']]
                     ])
             }
             }
