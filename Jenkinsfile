@@ -4,8 +4,7 @@ pipeline {
         stage('Gradle Build') {
             steps {
                 sh 'chmod +x gradlew'
-                sh './gradlew clean build'
-                sh '${WORKSPACE} 2>&1'
+                sh './gradlew clean test'
             }
         }
         stage('reports') {
@@ -16,7 +15,7 @@ pipeline {
                             jdk: '',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
-                            results: [[path: '${WORKSPACE}/build/allure-results']]
+                            results: [[path: 'build/allure-results']]
                     ])
             }
             }
