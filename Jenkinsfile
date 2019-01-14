@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'chmod +x gradlew'
                 sh './gradlew clean build'
-                sh 'pwd'
+                sh '${WORKSPACE} 2>&1'
             }
         }
         stage('reports') {
@@ -16,7 +16,7 @@ pipeline {
                             jdk: '',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
-                            results: [[path: 'todoist-testng/build/allure-results']]
+                            results: [[path: '${WORKSPACE}/build/allure-results']]
                     ])
             }
             }
