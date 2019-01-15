@@ -5,6 +5,8 @@ pipeline {
         stage('Gradle Build') {
             steps {
                 sh 'chmod +x gradlew'
+                sh 'echo ${browser}'
+                sh 'echo $browser'
                 sh './gradlew clean test -Dbrowser=${browser}'
             }
         }
