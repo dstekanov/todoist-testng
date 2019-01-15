@@ -1,12 +1,6 @@
 pipeline {
     agent any
 
-    properties([
-        parameters([
-            choice(choices: ['chrome', 'firefox'], description: '', name: 'browser')
-                  ])
-              ])
-
     stages {
         stage('Gradle Build') {
             steps {
