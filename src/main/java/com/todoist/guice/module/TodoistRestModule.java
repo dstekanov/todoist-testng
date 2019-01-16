@@ -28,7 +28,7 @@ public class TodoistRestModule extends AbstractModule {
         //objectMapper.registerModule(new JavaTimeModule());
         //objectMapper.registerModule(new Jdk8Module());
         objectMapper.findAndRegisterModules();
-        objectMapper.disable(SerializationFeature.WRITE_NULL_MAP_VALUES);
+//        objectMapper.disable(SerializationFeature.WRITE_NULL_MAP_VALUES);
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
