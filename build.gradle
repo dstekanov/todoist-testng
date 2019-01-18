@@ -24,7 +24,7 @@ ext {
     selenideVersion = '5.+'
     testngVersion = '6.+'
     guiceVersion = '4.+'
-    allureVersion = '2.9.0'
+    allureVersion = '2.7.0'
     mainTestNGsuite = 'testng-suites/testng.xml'
 }
 
@@ -44,9 +44,11 @@ test {
 }
 
 allure {
-    version = '2.5'
+    version = allureVersion
     autoconfigure = true
     aspectjweaver = true
+
+    downloadLink = "https://github.com/allure-framework/allure2/releases/download/2.8.0/allure-2.8.0.zip"
 }
 
 buildscript {

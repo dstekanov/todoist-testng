@@ -23,7 +23,7 @@ public class RemoteDriverConfiguration implements WebDriverConfiguration {
         selenoidCapabilities.setCapability("enableVNC", true);
         selenoidCapabilities.setCapability("enableVideo", true);
 
-        Configuration.remote = "https://" + Config.getGridHost() + "/wd/hub";
+        Configuration.remote = "http://" + Config.getGridHost() + "/wd/hub";
         Configuration.browserCapabilities = selenoidCapabilities;
         Configuration.browserSize = "1920x768";
     }
