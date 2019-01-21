@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Gradle Build') {
+        stage('Test') {
             steps {
                 sh 'chmod +x gradlew'
                 sh './gradlew clean test -Dbrowser=${browser}'
             }
         }
-        stage('reports') {
+        stage('Report') {
             steps {
             script {
                     allure([
