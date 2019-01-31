@@ -25,7 +25,8 @@ public class BaseTest {
     @BeforeSuite
     public void start() {
         driver.configure();
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        AllureSelenide allureSelenide = new AllureSelenide();
+        SelenideLogger.addListener("AllureSelenide", allureSelenide.screenshots(false).savePageSource(false));
     }
 
     @AfterClass(alwaysRun = true)
