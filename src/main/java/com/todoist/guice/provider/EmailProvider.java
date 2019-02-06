@@ -8,7 +8,6 @@ public class EmailProvider implements Provider<String> {
 
     @Override
     public String get() {
-        StringBuilder builder = new StringBuilder();
         return "testUser" + "_" + RandomStringUtils.randomAlphanumeric(10) + "@myadt.com";
     }
 }

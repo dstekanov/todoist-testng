@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'io.qameta.allure'
+apply plugin: 'ru.vyarus.quality'
 
 defaultTasks 'clean', 'test'
 
@@ -54,9 +55,11 @@ allure {
 buildscript {
     repositories {
         jcenter()
+        gradlePluginPortal()
     }
     dependencies {
         classpath "io.qameta.allure:allure-gradle:2.5"
+        classpath 'ru.vyarus:gradle-quality-plugin:3.3.0'
     }
 }
 
@@ -77,7 +80,7 @@ dependencies {
     compile 'io.qameta.allure:allure-assertj:' + allureVersion
     compile 'io.qameta.allure:allure-rest-assured:' + allureVersion
     compile 'io.qameta.allure:allure-selenide:' + allureVersion
-    compile 'io.qameta.allure:allure-java-commons:'+ allureVersion
+    compile 'io.qameta.allure:allure-java-commons:' + allureVersion
 
     testRuntime group: 'org.assertj', name: 'assertj-core', version: '3.9.0'
 

@@ -5,6 +5,7 @@
 **/test-output/
 **/.allure/
 log/
+allure-results/
 
 **/.idea/uiDesigner.xml
 **/.idea/deployment.xml

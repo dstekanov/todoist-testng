@@ -7,6 +7,9 @@ import io.restassured.response.Response;
 
 import java.util.List;
 
+/**
+ * API useful steps
+ */
 public class TodoistRestSteps {
 
     @Inject
