@@ -24,3 +24,10 @@ We are using Feature Branch Workflow _(https://www.atlassian.com/git/tutorials/c
 - "Rearrange code"
 - "Cleanup"
 - "Update copyright"
+
+---
+
+UI test scenarios:
+
+-
+-

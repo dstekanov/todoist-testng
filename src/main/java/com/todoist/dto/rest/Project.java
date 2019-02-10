@@ -7,19 +7,19 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class Project {
 
     @JsonProperty
-    public String id;
+    public Long id;
 
     @JsonProperty
     public String name;
 
     @JsonProperty
-    public String order;
+    public Integer order;
 
     @JsonProperty
-    public String indent;
+    public Integer indent;
 
     @JsonProperty
-    public String commentCount;
+    public Integer commentCount;
 
     @Override
     public String toString() {

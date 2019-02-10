@@ -8,12 +8,14 @@ import java.util.List;
 
 public class ProjectResource extends BaseResource {
 
+    private static final String PROJECTS_ENDPOINT = "projects";
+
     /**
      * GET /API/v8/projects/{projectKey}
      */
     public Project get(String projectKey) {
         Response response = newRequest()
-                .get("projects/{projectKey}", projectKey);
+                .get(String.format("%s/{projectKey}", PROJECTS_ENDPOINT), projectKey);
 
         return response.as(Project.class);
     }
@@ -23,7 +25,7 @@ public class ProjectResource extends BaseResource {
      */
     public List<Project> get() {
         Response response = newRequest()
-                .get("projects");
+                .get(PROJECTS_ENDPOINT);
 
         return Arrays.asList(response.as(Project[].class));
     }
@@ -33,6 +35,6 @@ public class ProjectResource extends BaseResource {
      */
     public Response getFullProjectsResponse() {
         return newRequest()
-                .get("projects");
+                .get(PROJECTS_ENDPOINT);
     }
 }

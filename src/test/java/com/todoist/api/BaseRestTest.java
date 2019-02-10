@@ -1,6 +1,5 @@
-package com.todoist.rest;
+package com.todoist.api;
 
-import com.todoist.api.TodoistRestSteps;
 import com.todoist.guice.MainModule;
 import org.testng.annotations.Guice;
 
@@ -10,5 +9,5 @@ import javax.inject.Inject;
 public class BaseRestTest {
 
     @Inject
-    TodoistRestSteps todoistRestSteps;
+    protected TodoistRestSteps todoistRestSteps;
 }

@@ -2,6 +2,7 @@ package com.todoist.api;
 
 import com.google.inject.Inject;
 import com.todoist.dto.rest.Project;
+import com.todoist.dto.rest.Task;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
@@ -26,4 +27,11 @@ public class TodoistRestSteps {
 
         return restApi.project().getFullProjectsResponse();
     }
+
+    @Step
+    public List<Task> getActiveTasks() {
+
+        return restApi.tasks().get();
+    }
+
 }

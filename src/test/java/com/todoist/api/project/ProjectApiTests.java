@@ -1,14 +1,16 @@
-package com.todoist.rest;
+package com.todoist.api.project;
 
+import com.todoist.api.BaseRestTest;
 import com.todoist.dto.rest.Project;
 import io.qameta.allure.Description;
 import io.restassured.path.json.JsonPath;
+import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Map;
 
-public class TodoistRestTests extends BaseRestTest {
+public class ProjectApiTests extends BaseRestTest {
 
     @Test
     @Description("Request all existing projects")
@@ -16,6 +18,8 @@ public class TodoistRestTests extends BaseRestTest {
         List<Project> projects = todoistRestSteps.getProjects();
 
         System.out.println(projects);
+
+        Assertions.assertThat(projects).size().isGreaterThan(0);
     }
 
     @Test

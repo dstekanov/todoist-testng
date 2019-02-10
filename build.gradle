@@ -92,6 +92,8 @@ dependencies {
     compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'
+    
     compile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.7'
+    
     compile group: 'javax.mail', name: 'mail', version: '1.5.0-b01'
 }

@@ -74,7 +74,7 @@ public class TodoistRequestSpecificationProvider implements Provider<RequestSpec
                 .filter(new AllureRestAssured()) // Attach logs to allure report
                 .log().ifValidationFails()
                 .then()
-                .log().ifError()
+                .log().all()
                 .spec(responseSpec)
                 .request();
 

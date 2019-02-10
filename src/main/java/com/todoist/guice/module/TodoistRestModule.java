@@ -42,6 +42,8 @@ public class TodoistRestModule extends AbstractModule {
 
         //objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
+        objectMapper.writerWithDefaultPrettyPrinter();
+
         restApiMapper = objectMapper;
     }
 
