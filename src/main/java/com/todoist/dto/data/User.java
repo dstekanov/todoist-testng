@@ -1,6 +1,6 @@
 package com.todoist.dto.data;
 
-public class UserDTO {
+public class User {
 
     private String email;
     private String password;

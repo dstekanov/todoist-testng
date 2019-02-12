@@ -1,5 +1,5 @@
 {
-  "@type": "com.todoist.dto.data.UserDTO",
+  "@type": "com.todoist.dto.data.User",
   "email": "testfreshaddress@gmail.com",
   "password": "nightR99"
 }

@@ -11,10 +11,10 @@ public class ProjectResource extends BaseResource {
     private static final String PROJECTS_ENDPOINT = "projects";
 
     /**
-     * GET /API/v8/projects/{projectKey}
+     * GET /API/v8/projects/{projectKey}.
      */
     public Project get(String projectKey) {
-        Response response = newRequest()
+        final Response response = newRequest()
                 .get(String.format("%s/{projectKey}", PROJECTS_ENDPOINT), projectKey);
 
         return response.as(Project.class);
@@ -24,7 +24,7 @@ public class ProjectResource extends BaseResource {
      * GET /API/v8/projects
      */
     public List<Project> get() {
-        Response response = newRequest()
+        final Response response = newRequest()
                 .get(PROJECTS_ENDPOINT);
 
         return Arrays.asList(response.as(Project[].class));
@@ -34,7 +34,6 @@ public class ProjectResource extends BaseResource {
      * GET /API/v8/projects
      */
     public Response getFullProjectsResponse() {
-        return newRequest()
-                .get(PROJECTS_ENDPOINT);
+        return newRequest().get(PROJECTS_ENDPOINT);
     }
 }

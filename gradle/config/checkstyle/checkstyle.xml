@@ -53,9 +53,9 @@
         <module name="MutableException"/>
         <module name="OneTopLevelClass"/>
         <module name="ThrowsCount"/>
-        <module name="VisibilityModifier">
-            <property name="protectedAllowed" value="true"/>
-        </module>
+        <!--<module name="VisibilityModifier">-->
+        <!--<property name="protectedAllowed" value="true"/>-->
+        <!--</module>-->
 
 
         <!-- Coding (http://checkstyle.sourceforge.net/config_coding.html) -->
@@ -136,7 +136,7 @@
         <!--<module name="JavadocMethod"/>-->
         <!--<module name="JavadocPackage"/>-->
         <!--<module name="JavadocParagraph"/>-->
-        <module name="JavadocStyle"/>
+        <!--<module name="JavadocStyle"/>-->
         <!--<module name="JavadocTagContinuationIndentation"/>-->
         <!--<module name="JavadocType"/>-->
         <!--<module name="JavadocVariable"/>-->
@@ -148,7 +148,7 @@
 
         <!-- Metrics (http://checkstyle.sourceforge.net/config_metrics.html) -->
         <module name="BooleanExpressionComplexity"/>
-        <module name="ClassDataAbstractionCoupling"/>
+        <!--<module name="ClassDataAbstractionCoupling"/>-->
         <module name="ClassFanOutComplexity"/>
         <module name="CyclomaticComplexity"/>
         <module name="JavaNCSS"/>

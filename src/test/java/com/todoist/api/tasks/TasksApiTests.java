@@ -15,8 +15,6 @@ public class TasksApiTests extends BaseRestTest {
     public void requestProjects() {
         List<Task> tasks = todoistRestSteps.getActiveTasks();
 
-//        System.out.println(tasks);
-
         Assertions.assertThat(tasks).size().isGreaterThan(0);
     }
 

@@ -5,7 +5,7 @@ import com.todoist.api.resources.ProjectResource;
 import com.todoist.api.resources.TasksResource;
 
 /**
- * Todoist API
+ * Todoist API.
  */
 public class TodoistRestApi {
 

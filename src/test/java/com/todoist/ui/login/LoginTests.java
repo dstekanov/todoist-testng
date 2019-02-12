@@ -1,6 +1,6 @@
 package com.todoist.ui.login;
 
-import com.todoist.dto.data.UserDTO;
+import com.todoist.dto.data.User;
 import com.todoist.steps.NavigationSteps;
 import com.todoist.ui.BaseTest;
 import com.todoist.ui.page.loginpage.LoginPage;
@@ -23,7 +23,7 @@ public class LoginTests extends BaseTest {
     private TodayPage todayPage;
     @Inject
     @Named("user_regular")
-    private UserDTO user;
+    private User user;
 
     @Test
     @Description("Verify that user can login.")

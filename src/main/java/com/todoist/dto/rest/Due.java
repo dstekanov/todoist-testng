@@ -2,6 +2,8 @@ package com.todoist.dto.rest;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Date;
+
 
 /**
  * "due": {
@@ -18,7 +20,7 @@ public class Due {
      * Date in format YYYY-MM-DD corrected to user’s timezone.
      */
     @JsonProperty
-    public String date;
+    public Date date;
 
     @JsonProperty
     public Boolean recurring;

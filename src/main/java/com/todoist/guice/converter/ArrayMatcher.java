@@ -16,7 +16,7 @@ public class ArrayMatcher extends AbstractMatcher<TypeLiteral<?>> {
 
     @Override
     public boolean matches(TypeLiteral<?> typeLiteral) {
-        Type type = typeLiteral.getType();
+        final Type type = typeLiteral.getType();
         return type instanceof GenericArrayType
                 &&
                 ((GenericArrayType) type).getGenericComponentType().equals(arrayClass);

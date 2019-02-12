@@ -17,8 +17,6 @@ public class ProjectApiTests extends BaseRestTest {
     public void requestProjects() {
         List<Project> projects = todoistRestSteps.getProjects();
 
-        System.out.println(projects);
-
         Assertions.assertThat(projects).size().isGreaterThan(0);
     }
 

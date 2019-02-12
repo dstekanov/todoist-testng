@@ -9,7 +9,7 @@ import io.restassured.response.Response;
 import java.util.List;
 
 /**
- * API useful steps
+ * API useful steps.
  */
 public class TodoistRestSteps {
 

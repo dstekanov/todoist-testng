@@ -1,6 +1,7 @@
 package com.todoist.guice.provider;
 
 import com.todoist.utils.Config;
+import com.todoist.webdriver.Browser;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -21,12 +22,10 @@ public class BrowserWebDriverContainerProvider implements Provider<BrowserWebDri
     }
 
     private DesiredCapabilities chooseBrowser() {
-        switch (Config.getBrowser()) {
-            case FIREFOX:
-                return DesiredCapabilities.firefox();
-            default:
-                return DesiredCapabilities.chrome();
+        if (Config.getBrowser() == Browser.FIREFOX) {
+            return DesiredCapabilities.firefox();
         }
+        return DesiredCapabilities.chrome();
     }
 
     private DesiredCapabilities commonCapabilities() {
