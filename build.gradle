@@ -18,7 +18,7 @@ repositories {
 
 ext {
     seleniumVersion = '3.14.0'
-    selenideVersion = '5.+'
+    selenideVersion = '5.1.0'
     testngVersion = '6.+'
     guiceVersion = '4.+'
     allureVersion = '2.9.0'
@@ -41,11 +41,12 @@ test {
 }
 
 allure {
-//    autoconfigure = true
-//    aspectjweaver = true
+    autoconfigure = true
+    aspectjweaver = true
 
     version = allureVersion
-
+    aspectjVersion = '1.9.2'
+    
     useTestNG {
         version = allureVersion
     }
@@ -77,6 +78,7 @@ dependencies {
 
     compile group: 'org.testcontainers', name: 'selenium', version: '1.10.1'
 
+    compile 'io.qameta.allure:allure-testng:' + allureVersion
     compile 'io.qameta.allure:allure-assertj:' + allureVersion
     compile 'io.qameta.allure:allure-rest-assured:' + allureVersion
     compile 'io.qameta.allure:allure-selenide:' + allureVersion

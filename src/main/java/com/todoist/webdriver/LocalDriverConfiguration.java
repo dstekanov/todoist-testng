@@ -39,6 +39,7 @@ public class LocalDriverConfiguration implements WebDriverConfiguration {
         // endregion =========== BrowserMob proxy ================================
 
         Configuration.browser = browser.getName();
+        Configuration.headless = true;
 
         Configuration.browserCapabilities = new DesiredCapabilities(DriverCapabilities.capabilitiesFor(browser).get());
     }

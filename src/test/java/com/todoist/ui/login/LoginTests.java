@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import static io.qameta.allure.Allure.parameter;
+
 @Story("Login Tests")
 public class LoginTests extends BaseTest {
 
@@ -31,8 +33,8 @@ public class LoginTests extends BaseTest {
         navigationSteps.openLoginPage();
 
         loginPage
-                .setEmail(user.getEmail())
-                .setPassword(user.getPassword())
+                .setEmail(parameter("email", user.getEmail()))
+                .setPassword(parameter("password", user.getPassword()))
                 .clickLoginButton();
         todayPage.verifyOpened();
     }

@@ -26,13 +26,11 @@ public class BrowserSteps {
         Selenide.open(url);
     }
 
-    @Step
     public void openPath(String protocol, String baseUrl, String path) {
         String base = String.format("%s://%s", protocol, baseUrl);
         openPath(base, path);
     }
 
-    @Step
     public void openPath(String baseUrl, String path) {
         String url = (baseUrl.endsWith("/") || path.startsWith("/"))
                 ? baseUrl + path
@@ -40,7 +38,6 @@ public class BrowserSteps {
         openUrl(url);
     }
 
-    @Step
     public String getCurrentUrl() {
         return WebDriverRunner.url();
     }
