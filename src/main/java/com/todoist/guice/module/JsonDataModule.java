@@ -10,7 +10,11 @@ import org.apache.logging.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 public class JsonDataModule<T> extends AbstractModule {
 
@@ -34,7 +38,7 @@ public class JsonDataModule<T> extends AbstractModule {
             binder().addError(e);
         }
 
-        // Suppress unchecked warning. toInstance receive correct object
+        // Suppress unchecked warning... toInstance receive correct object
         // @Inject @Named("fileName") Object variable;
         objects.forEach((o) ->
                 bind(o.getClazz())
