@@ -18,7 +18,7 @@ repositories {
 
 ext {
     seleniumVersion = '3.14.0'
-    selenideVersion = '5.1.0'
+    selenideVersion = '5.2.2'
     testngVersion = '6.+'
     guiceVersion = '4.+'
     allureVersion = '2.9.0'
@@ -40,6 +40,16 @@ test {
     systemProperty 'browser', System.getProperty('browser', '{default}')
 }
 
+buildscript {
+    repositories {
+        jcenter()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.7.0"
+    }
+}
+
 allure {
     autoconfigure = true
     aspectjweaver = true
@@ -54,18 +64,13 @@ allure {
 //    downloadLink = "https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/$allureVersion/allure-commandline-${allureVersion}.zip"
 }
 
-buildscript {
-    repositories {
-        jcenter()
-        gradlePluginPortal()
-    }
-    dependencies {
-        classpath "io.qameta.allure:allure-gradle:2.7.0"
-//        classpath 'ru.vyarus:gradle-quality-plugin:3.3.0'
-    }
+repositories {
+    maven { url 'https://dl.bintray.com/viclovsky/maven' }
 }
 
 dependencies {
+    implementation 'com.github.viclovsky.swagger.coverage:swagger-coverage-rest-assured:1.1.1'
+    
     compile 'com.codeborne:selenide:' + selenideVersion
 
     compile 'org.testng:testng:' + testngVersion
