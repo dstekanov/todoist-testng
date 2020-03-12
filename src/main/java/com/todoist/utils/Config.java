@@ -22,7 +22,7 @@ public class Config {
         return PROPERTIES;
     }
 
-    // --------- assistant methods ---------
+    // --------- assistant methods --------- 1
 
     public static Path getJsonTestDataFolder() {
         return Paths.get(PROPERTIES.getProperty("test_data_folder_json"));
