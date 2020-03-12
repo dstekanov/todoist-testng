@@ -58,7 +58,6 @@ public class MainModule extends AbstractModule {
         binder.convertToTypes(new ArrayMatcher(boolean.class), ArrayConverter.bOOLEAN_ARRAY_CONVERTER);
         binder.convertToTypes(new ArrayMatcher(Double.class), ArrayConverter.DOUBLE_ARRAY_CONVERTER);
         binder.convertToTypes(new ArrayMatcher(double.class), ArrayConverter.dOUBLE_ARRAY_CONVERTER);
-
         //List converters
         binder.convertToTypes(new ListMatcher(String.class), new ListTypeConverter());
         binder.convertToTypes(new ListMatcher(Integer.class), new ListTypeConverter());
