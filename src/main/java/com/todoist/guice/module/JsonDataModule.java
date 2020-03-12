@@ -39,7 +39,7 @@ public class JsonDataModule<T> extends AbstractModule {
         }
 
         // Suppress unchecked warning... toInstance receive correct object
-        // @Inject @Named("fileName") Object variable;
+        // @Inject @Named("fileName") Object variable; 1
         objects.forEach((o) ->
                 bind(o.getClazz())
                         .annotatedWith(Names.named(o.getFileName()))
