@@ -1,12 +1,18 @@
 package com.todoist.guice.provider;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.viclovsky.swagger.coverage.SwaggerCoverageRestAssured;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.config.*;
+import io.restassured.config.DecoderConfig;
+import io.restassured.config.EncoderConfig;
+import io.restassured.config.HeaderConfig;
+import io.restassured.config.HttpClientConfig;
+import io.restassured.config.ObjectMapperConfig;
+import io.restassured.config.RestAssuredConfig;
 import io.restassured.mapper.ObjectMapperType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -14,7 +20,9 @@ import io.restassured.specification.ResponseSpecification;
 import javax.inject.Named;
 import java.nio.charset.StandardCharsets;
 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.greaterThanOrEqualTo;
+import static org.hamcrest.Matchers.lessThan;
 
 public class TodoistRequestSpecificationProvider implements Provider<RequestSpecification> {
 
@@ -35,7 +43,7 @@ public class TodoistRequestSpecificationProvider implements Provider<RequestSpec
 
     @Override
     public RequestSpecification get() {
-        return createRequest("API", "v8");
+        return createRequest("rest", "v1");
     }
 
     private RequestSpecification createRequest(String apiName, String apiVersion) {
@@ -72,6 +80,7 @@ public class TodoistRequestSpecificationProvider implements Provider<RequestSpec
                 .config(CONFIG)
                 .contentType("application/json;charset=UTF-8")
                 .filter(new AllureRestAssured()) // Attach logs to allure report
+                .filter(new SwaggerCoverageRestAssured())
                 .log().ifValidationFails()
                 .then()
                 .log().all()

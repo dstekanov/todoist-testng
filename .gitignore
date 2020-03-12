@@ -7,13 +7,6 @@
 log/
 allure-results/
 
-**/.idea/uiDesigner.xml
-**/.idea/deployment.xml
-**/.idea/tasks.xml
-**/.idea/misc.xml
-**/.idea/libraries/
-**/.idea/workspace.xml
-
 build/
 
 # Ignore Gradle GUI config
@@ -26,3 +19,41 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+
+# IntelliJ
+out/
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/misc.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Comment if you are not using
+# auto-import.
+.idea/modules.xml
+.idea/*.iml
+.idea/modules/
+
+# File-based project format
+*.iws
